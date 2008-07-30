@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project name="battleships" default="compile">
+
+  <!--=======================================================================-->
+  <target name="compile" description="Compile the sources">
+    <tstamp/>
+    <mkdir dir="web/WEB-INF/classes"/>
+    <javac debug="on" includes="**/*.java" destdir="web/WEB-INF/classes">
+      <src path="java"/>
+      <classpath>
+        <fileset dir="jar" includes="**/*.jar"/>
+        <fileset dir="web/WEB-INF/lib" includes="**/*.jar"/>
+      </classpath>
+    </javac>
+  </target>
+
+  <!--=======================================================================-->
+  <target name="clean">
+    <delete dir="web/WEB-INF/classes"/>
+  </target>
+
+  <!--=======================================================================-->
+  <target name="cvsup" description="cvs update">
+    <cvs dest=".">
+      <commandline>
+        <argument value="-q"/>
+        <argument value="update"/>
+        <argument value="-d"/>
+        <argument value="-P"/>
+      </commandline>
+    </cvs>
+  </target>
+
+</project>
