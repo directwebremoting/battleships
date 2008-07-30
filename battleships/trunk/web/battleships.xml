@@ -1,0 +1,8 @@
+
+<Context
+    docBase="/Users/joe/Documents/development/getahead/battleships/live/web"
+    reloadable="true"
+    swallowOutput="true"
+    >
+
+</Context>
