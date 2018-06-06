@@ -1,4 +1,4 @@
-# DWR battleships
+# DWR Battleships
 
 Multi-player web game created for The Ajax Experience conference talk
 
